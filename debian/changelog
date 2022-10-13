@@ -1,0 +1,41 @@
+node-cli-cursor (3.1.0-1) unstable; urgency=medium
+
+  * Team upload
+
+  [ Paolo Greppi ]
+  * Update Vcs fields for migration to https://salsa.debian.org/
+
+  [ Debian Janitor ]
+  * Use secure copyright file specification URI.
+  * Bump debhelper from old 9 to 12.
+  * Set debhelper-compat version in Build-Depends.
+  * Set upstream metadata fields: Bug-Database, Bug-Submit, Repository,
+    Repository-Browse.
+
+  [ Xavier Guimard ]
+  * Declare compliance with policy 4.5.0
+  * Use pkg-js-tools auto test & install
+  * Add "Rules-Requires-Root: no"
+  * Add debian/gbp.conf
+  * Update copyright
+  * New upstream version 3.1.0
+  * Update test (use tape)
+
+ -- Xavier Guimard <yadd@debian.org>  Wed, 29 Apr 2020 09:22:11 +0200
+
+node-cli-cursor (2.1.0-1) unstable; urgency=medium
+
+  * Refresh patch
+  * Bump standards version
+
+  [ Pirate Praveen ]
+  * New upstream release
+  * Drop patch for nodejs command
+
+ -- Paolo Greppi <paolo.greppi@libpf.com>  Thu, 02 Nov 2017 19:33:45 +0100
+
+node-cli-cursor (1.0.2-1) unstable; urgency=low
+
+  * Initial release (Closes: #849185)
+
+ -- Paolo Greppi <paolo.greppi@libpf.com>  Fri, 23 Dec 2016 11:00:35 +0000

@@ -1,0 +1,5 @@
+version=3
+opts=\
+dversionmangle=s/\+(debian|dfsg|ds|deb)(\.\d+)?$//,\
+filenamemangle=s/.*\/v?([\d\.-]+)\.tar\.gz/node-cli-cursor-$1.tar.gz/ \
+ https://github.com/sindresorhus/cli-cursor/tags .*/archive/v?([\d\.]+).tar.gz

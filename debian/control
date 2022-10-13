@@ -1,0 +1,26 @@
+Source: node-cli-cursor
+Section: javascript
+Priority: optional
+Maintainer: Debian Javascript Maintainers <pkg-javascript-devel@lists.alioth.debian.org>
+Uploaders: Paolo Greppi <paolo.greppi@libpf.com>
+Build-Depends: debhelper-compat (= 12)
+ , node-restore-cursor (>= 2.0.0) <!nocheck>
+ , node-tape <!nocheck>
+ , pkg-js-tools (>= 0.9.20~)
+Standards-Version: 4.5.0
+Vcs-Browser: https://salsa.debian.org/js-team/node-cli-cursor
+Vcs-Git: https://salsa.debian.org/js-team/node-cli-cursor.git
+Homepage: https://github.com/sindresorhus/cli-cursor
+Testsuite: autopkgtest-pkg-nodejs
+Rules-Requires-Root: no
+
+Package: node-cli-cursor
+Architecture: all
+Depends: ${misc:Depends}
+ , node-restore-cursor (>= 2.0.0)
+ , nodejs (>= 4)
+Description: Toggle the CLI cursor
+ Node.js module to toggle the CLI cursor; the cursor is gracefully restored if
+ the process exits.
+ .
+ Node.js is an event-based server-side JavaScript engine.
