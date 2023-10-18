@@ -1,0 +1,4 @@
+restore-cursor	test
+@rollup/plugin-commonjs
+@rollup/plugin-node-resolve
+tape	test

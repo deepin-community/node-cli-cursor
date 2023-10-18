@@ -1,0 +1,27 @@
+Description: export index.cjs
+Author: Yadd <yadd@debian.org>
+Forwarded: not-needed
+Last-Update: 2022-08-29
+
+--- a/package.json
++++ b/package.json
+@@ -11,7 +11,10 @@
+ 		"url": "https://sindresorhus.com"
+ 	},
+ 	"type": "module",
+-	"exports": "./index.js",
++	"exports": {
++		"import": "./index.js",
++		"require": "./index.cjs"
++	},
+ 	"engines": {
+ 		"node": "^12.20.0 || ^14.13.1 || >=16.0.0"
+ 	},
+@@ -19,6 +22,7 @@
+ 		"test": "xo && ava && tsd"
+ 	},
+ 	"files": [
++		"index.cjs",
+ 		"index.js",
+ 		"index.d.ts"
+ 	],

@@ -1,64 +1,62 @@
 Description: replace ava by tape for test
 Author: Xavier Guimard <yadd@debian.org>
 Forwarded: not-needed
-Last-Update: 2020-04-29
+Last-Update: 2022-08-29
 
 --- a/test.js
 +++ b/test.js
 @@ -1,6 +1,6 @@
--import childProcess from 'child_process';
+ import process from 'node:process';
+ import childProcess from 'node:child_process';
 -import test from 'ava';
--import cliCursor from '.';
-+const childProcess = require('child_process');
-+const test = require('tape');
-+const cliCursor = require('.');
++import test from 'tape';
+ import cliCursor from './index.js';
  
  const {stderr: {write}} = process;
- const SHOW = '\u001B[?25h';
-@@ -23,38 +23,46 @@
+@@ -24,38 +24,46 @@
  
  test('show', t => {
  	t.is(getStderr(cliCursor.show), SHOW);
-+    t.end();
++	t.end();
  });
  
  test('hide', t => {
  	t.is(getStderr(cliCursor.hide), HIDE);
-+    t.end();
++	t.end();
  });
  
  test('toggle', t => {
  	cliCursor.hide();
  	t.is(getStderr(cliCursor.toggle), SHOW);
-+    t.end();
++	t.end();
  });
  
  test('toggle 2', t => {
  	cliCursor.show();
  	t.is(getStderr(cliCursor.toggle), HIDE);
-+    t.end();
++	t.end();
  });
  
  test('toggle force', t => {
  	cliCursor.show();
  	t.is(getStderr(cliCursor.toggle.bind(null, true)), SHOW);
-+    t.end();
++	t.end();
  });
  
  test('toggle force 2', t => {
  	cliCursor.hide();
  	t.is(getStderr(cliCursor.toggle.bind(null, true)), SHOW);
-+    t.end();
++	t.end();
  });
  
  test('toggle force 3', t => {
  	cliCursor.show();
  	t.is(getStderr(cliCursor.toggle.bind(null, false)), HIDE);
-+    t.end();
++	t.end();
  });
  
  // Used to fail, see sindresorhus/log-update#2
  test('require', t => {
  	t.is(childProcess.execSync('node index.js', {encoding: 'utf8'}), '');
-+    t.end();
++	t.end();
  });
