@@ -1,3 +1,48 @@
+node-cli-cursor (4.0.0-3) unstable; urgency=medium
+
+  * Team upload
+  * Fix rollup config for rollup 3 (Closes: #1022593)
+
+ -- Yadd <yadd@debian.org>  Tue, 25 Oct 2022 12:41:17 +0200
+
+node-cli-cursor (4.0.0-2) unstable; urgency=medium
+
+  * Team upload
+  * Fix rollup configuration for recent @rollup/plugin-node-resolve
+    (Closes: #1022403)
+
+ -- Yadd <yadd@debian.org>  Sun, 23 Oct 2022 18:37:41 +0200
+
+node-cli-cursor (4.0.0-1) unstable; urgency=medium
+
+  * Team upload
+  * Declare compliance with policy 4.6.1
+  * New upstream version 4.0.0
+  * Update test
+  * Build commonjs files
+  * Require node-restore-cursor >= 4
+
+ -- Yadd <yadd@debian.org>  Mon, 29 Aug 2022 13:51:22 +0200
+
+node-cli-cursor (3.1.0-2) unstable; urgency=medium
+
+  * Team upload
+
+  [ Debian Janitor ]
+  * Remove constraints unnecessary since buster:
+    + Build-Depends: Drop versioned constraint on node-restore-cursor.
+    + node-cli-cursor: Drop versioned constraint on node-restore-cursor and
+      nodejs in Depends.
+
+  [ Yadd ]
+  * Bump debhelper from old 12 to 13
+  * Fix GitHub regex
+  * Update standards version to 4.6.0, no changes needed.
+  * Fix filenamemangle
+  * Drop dependency to nodejs
+
+ -- Yadd <yadd@debian.org>  Fri, 26 Nov 2021 09:17:08 +0100
+
 node-cli-cursor (3.1.0-1) unstable; urgency=medium
 
   * Team upload

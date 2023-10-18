@@ -1,1 +1,2 @@
 replace-ava-by-tape.diff
+export-commonjs-files.patch
